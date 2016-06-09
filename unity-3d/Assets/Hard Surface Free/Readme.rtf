@@ -1,0 +1,245 @@
+{\rtf1\ansi\ansicpg1252\deff0\deftab709{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\froman\fprq2\fcharset0 Times New Roman;}{\f2\fnil\fcharset0 arial;}{\f3\fswiss\fprq2\fcharset128 Arial;}{\f4\fnil\fcharset128 OpenSymbol;}{\f5\fnil\fcharset0 Helvetica;}}
+{\colortbl ;\red192\green192\blue192;\red0\green153\blue255;\red102\green102\blue102;\red0\green0\blue0;\red17\green17\blue17;}
+{\*\generator Msftedit 5.41.15.1515;}\viewkind4\uc1\pard\cf1\lang1033\b\i\f0\fs14\par
+\cf0\b0\i0\fs24\par
+\par
+\cf2\b\i\fs18\par
+\cf0\b0\i0\fs24\par
+\pard\qc\cf2\b\i\fs18\par
+\b0\i0\fs52 Hard Surface Shader Pack v1.1\par
+\cf1\b\i\fs18 All assets and shader code created by Bruno Rime for the Unity3D engine.\cf0\b0\i0\par
+\cf1\b\i Email Address brunorime@gmail.com\par
+\par
+\pard\cf2\i0 Hard Surface Shader Pack Overview\i\fs24\par
+\cf0\b0\i0\fs20\par
+\fs18 The Hard Surface shader pack has been designed to reproduce the surface and lighting qualities of any hard surface, including reflections, refractions, specular highlights, light transfer and much more. Perfect for special effects and presentation pieces .\par
+\fs24\par
+\fs18 The shader pack is ideal for applications where surfaces such as glass, metals, plastics, ceramics or even waxes need to be reproduced. The pack is available in three formats, each tailored to suit your own budget and requirements. \par
+\par
+\cf2\b\fs24 Feature Descriptions\b0\i\par
+\cf0\i0\fs18\par
+\cf2\b Shader Model 2 Fallback.\par
+\cf0\b0 A feature that enables the shader pack to run on older and some mobile platforms, when Shader Model 3 hardware is unavailable.\par
+\i\fs16\par
+\cf2\b\i0\fs18 Upgrade & Downgrade Compatible\cf0\b0\fs24\par
+\fs18 All Hard Surface shaders are interchangeable and will allow you to swap shaders on the fly to suit your performance or visual requirements without having to re-adjust your material properties.\par
+\fs24\par
+\cf2\b\fs18 Non Additive Reflections\par
+\cf0\b0 The method used in the Hard Surface Shader pack differs from the standard reflection model in that it always ensures the light reflected from a surface is never more than the total light energy of the scene. What does this mean for you? Quite simply it means that your reflections won't blow out in brightly lit scenes, while the same material will work properly in all lighting conditions. Finally, it's possible to easily create white reflective surfaces, without major headaches.\par
+\par
+\cf2\b Opaque & Transparent Variations & Light Transfer\cf0\b0\par
+Because of the unique way that the shader pack has been designed, it is now easy to reproduce not only Opaque or Transparent surfaces, but everything in between as well. Semi-translucent surfaces, such as wax and porcelain, are able to be emulated using the Opaque shader set where the alpha property controls light transfer, but retains opacity. The Transparent shader set allows for Opacity & Light Transfer to occur, giving you full control over surfaces such as Glass or gems like jade etc.\par
+\cf3\i\fs16\par
+\cf2\b\i0\fs18 Diffuse, Alpha, Bump Specular, Gloss, Reflection Properties and Masks\cf0\b0\fs24\par
+\fs18 The Hard Surface shader pack features multiple variations of all the above combinations utilizing both slider properties and texture masks, giving you the ability to choose the exact feature set you require for your application without having to carry any extra performance overheads.\par
+\fs24\par
+\cf2\b\fs18 Metallic Reflections\cf0\b0\par
+A unique feature of the Hard surface shader pack is the metallic reflections property. It allows you to capture how reflections differ on surfaces of varying conductivity. A range of surfaces from gold to plastic can be achieved accurately and most importantly, easily.\par
+\cf2\b\par
+Fresnel Reflections\cf0\b0\f1\fs24\par
+\f0\fs18 For many surfaces the more obtuse the reflection angle becomes the more reflective the surface appears. The Fresnel reflection slider enables you to control these types of reflections to achieve a greater level of realism.\par
+\cf2\b\par
+Edge Alpha\par
+\cf0\b0 To capture surfaces like wax it is important to have control over both the light transfer and opacity of surface edges. The Edge Alpha property gives you this control.\par
+\cf3\i\fs16\par
+\cf0\i0\fs18\par
+\cf2\b Z-primed Transparent Surfaces.\par
+\cf0\b0 This feature ensures that back facing surfaces won't draw over front facing surfaces. It also cleans up ugly internal faces that might normally ruin a great looking asset. This is especially important on complex shapes like characters.\fs24\par
+\pard\qc\cf2\b\fs18\par
+\pard Uncompiled Shaders (Standard & Pro only)\par
+\cf0\b0 You paid for it, so you get full access to the Hard Surface Shader Code. Fully commented shaders and .cginc files will enable you to customize and merge Hard surface shaders with your own. Whether it's for professional, educational or just for your own curiosity, the full architecture is available for you to use.\par
+\fs24\par
+\cf2\b\fs18 Back-face rendering (Standard & Pro only)\par
+\cf0\b0 An important addition to the Standard & Pro packs for replicating transparent surfaces is back-face rendering combined with Z priming. This allows for glitch free rendering of complex and detailed surfaces. On Direct X platforms using Shader model 3, back faces also feature a simple light diffusion effect based on opacity.\par
+\cf3\i\fs16\par
+\pard\qc\cf0\i0\par
+\pard\cf2\b\fs18 Draw First & Draw Last Variations (Standard & Pro only)\par
+\cf4\b0 Shader variations to get you out of a tangle when the unity render refuses to play nicely. Forces the draw order of the Surface to ensure it renders when you need it to, especially useful for special effects or when you have multiple transparent/reflective surfaces that you need greater control over.\par
+\cf0\f1\fs24\par
+\cf2\b\f0\fs18 Screen Space Real-time Reflection (Pro Only)\par
+\cf4\b0 Reflects any visible surface to the camera without having to re-render the scene! Fast and effective on any curved surface. Works particularly well on cars and characters. No scripts or extra scene management required. Takes into consideration all Hard surface reflective properties including Fresnel influence and Texture masks.\par
+\cf0\fs24\par
+\cf2\b\fs18 Screen Space Real-time Refraction (Pro Only)\par
+\cf4\b0 Refracts any surface drawn before and behind the refractive surface. Comes with a Density property slider and takes into consideration all Hard Surface properties. It even self-refracts internal and back facing surfaces.\par
+\cf3\i\fs16\par
+\cf2\b\i0\fs18 Chromatic Aberration (Pro Only)\par
+\cf4\b0 Simulates the separation of Red, Green & Blue light through refractive surfaces. A key visual indicator of a surface's density.\par
+\cf3\i\fs16\par
+\cf0\i0\fs18\tab\tab\tab\tab\tab\tab\par
+\cf2\b\fs24 FAQ\par
+\fs18\par
+\i\fs20 Advantages of screen spaced reflections.\par
+\i0\par
+\fs18 How is it that Screen space reflections are so much faster to render than other methods?\par
+\cf4\b0 Screen space reflections utilize the existing frame buffer to generate the reflection, where as other methods require the scene to be redrawn to a render texture from the point of view of each asset. In some applications traditional reflections require up to 6 scene redraws per reflective asset, often resulting in very poor frame-rates. \par
+\cf0\fs24\par
+\cf2\b\fs18 Are Screen space reflections self reflecting?\par
+\cf4\b0 Screen space reflections are self reflecting, unlike most other methods. This is an advantage for complex shapes where self reflection adds an extra layer of realism to the result.\par
+\cf2\par
+\b How is it that you are able to render normally expensive effects like chromatic aberration without the cost?\par
+\cf4\b0 Once the 2D reflection vector has been calculated, it is very easy to modify to create special effects. In the case of the chromatic aberration,\b  \b0 the vector is merely scaled to look up each of the RGB components of the light source. For a traditional 3D reflection vector, each look up for the RGB components would require a complete recalculation of the reflection vector.\par
+\cf2\par
+\b Will screen spaced techniques work with augmented reality?\par
+\cf4\b0 Yes it will, because of the 2D nature of the effect. Any image source can be used to generate the reflection and or refraction. Your virtual objects can literally be reflecting or refracting your real world real-time captures!\par
+\cf0\fs24\par
+\cf2\b\fs18 Will the world pos have an effect on my reflective assets and batching?\par
+\cf4\b0 No it won't. Unlike traditional methods that render the scene from the position of the reflective asset, Screen Space techniques don't generate any asset specific render targets. Because of this, multiple assets can share the same material and exist in completely unrelated world positions. If these assets are marked static in the Unity editor, they will batch render, saving you draw calls and gaining you performance.\par
+\cf2\b\par
+\b0\par
+\b\i\fs20 Limitations of screen space reflections.\par
+\i0\fs18\par
+Why aren\rquote t the screen space reflections always visible from all angles?\par
+\cf4\b0 Screen space techniques utilize what's visible to the camera.  In the case of the reflections, only objects visible to the camera can be reflected in other surfaces.  To fill in the gaps, the Hard surface shaders fall back to a cube map when the reflection vector points towards the camera.\par
+\cf2\b\par
+\b0\fs24  \b\fs18 I'm getting stretched reflections on  flat surfaces?\b0\fs24\par
+\cf4\fs18 This artifact is a limitation of the screen space technique, which is essentially a 2D effect. Because there is very little angle variation on flat surfaces, the 2D reflection vector will remain relatively fixed over the surface. This results in the stretching effect. I recommend using other reflection techniques to achieve mirror perfect floor reflections. However if the reflection is subtle enough or warped by a normal map, the screen space technique will often be satisfactory and many times faster to render. It's worth noting that the Hard surface shaders can utilize cube maps with real-time updates should you choose to create them.\par
+\cf2\par
+\b Some Transparent surfaces aren\rquote t being reflected in my opaque surfaces?\par
+\cf4\b0 Because the reflection is generated from a screen capture, if the Asset hasn\rquote t been drawn yet, it can't be reflected. Transparent surfaces are normally drawn after opaque surfaces, resulting in the reflection not being visible.\par
+\cf0\fs24\par
+\cf2\b\i\fs20 Known Issues.\par
+\fs18\par
+\i0 Depth based image effects don't always work with transparent assets.\par
+\cf4\b0 Currently Unity 3.3 doesn\rquote t recognize assets in the transparent render-queue that have zwrite enabled, this results in effects like DOF overwriting them. As this wasn't the case in Unity 3.2 and it also happens with the standard unity shaders I am unable to offer a solution. I am working with the Unity developers to resolve this issue.\par
+\cf0\fs24\par
+\cf2\b\fs18 Depth based image effects will occasionally and randomly flip the grabpass buffer.\par
+\cf4\b0 The Unity developers are aware of this bug and are currently working on a fix. Unfortunately, it is very hard to reproduce consistently, which has made it difficult to track down. Again this bug is not limited to the Hard Surface shader package and also exists in the standard Unity shaders / image effects.\par
+\cf0\fs24\par
+\cf2\b Tips & Tricks\cf0\b0\par
+\cf2\b\par
+\fs18 Performance\par
+\cf4\b0\par
+\cf0 Hard surface shaders are forward lighting based, even so, they will work perfectly in a deferred lighting scene. Because of this, the biggest performance impact on the shaders comes from the number of lights the surface interacts with. Try to keep this as low as possible. (I'm looking into the possibility of creating deferred based versions of the opaque shaders for a future release)\par
+\fs24\par
+\fs18 Whenever possible, mark your assets as static in the Unity Editor. This will enable the Unity Engine to batch render objects that share the same material. This greatly reduces draw calls and improves performance.\par
+\fs24\par
+\fs18 Use only the shader variation that you need to. A great feature of the Hard surface shader package is the large selection of shader variations. Each shader has been optimized for its specific application and it is well worth selecting the specific shader for the task. The image below shows how effective lower specification shaders can look if used the right way.\fs24\par
+\f1\par
+\cf2\b\f0 Material Editor Properties\cf0\b0\f1\par
+\cf4\f0\fs18\par
+\cf2\b Main Colour (Red, Green, Blue, Alpha)\par
+\cf4\b0 RGB: Multiplies the diffuse colour or texture. Also determines the amount of light reflected or absorbed. Black = 100% absorption, white = 100% light reflected or transferred.\par
+\cf0\fs24\par
+\fs18 A: Multiplies the Diffuse Alpha. Also determines the amount of light transfer. 0 alpha = 100% light transfer, 256 alpha = no light transfer. On Transparent surfaces the Alpha value also determines the surfaces transparency and the amount of diffusion for back-face detail on D3D hardware.\par
+\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Use low alpha values with high RGB values to produce bright glass.\par
+\pard\fi438 A low alpha value while using an opaque shader will produce a wax like effect and let the light pass through the surface.\par
+\pard\cf4\par
+\cf2\b Specular Colour (Red, Green, Blue)\par
+\cf4\b0 Multiplies the lights source's Specular colour.\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Make the specular colour similar to the Diffuse/Main colour for a Metallic surface effect.\par
+\pard\li427 Use specular colours that are different to the Diffuse/Main colour to create pearl like paint effects.\par
+\pard\cf0 Use a White specular colour to create plastic like surfaces.\f1\fs24\par
+\cf4\f0\fs18  \par
+\cf2\b Shininess Slider\b0\f1\fs24\par
+\cf4\f0\fs18 Modifies the specular highlight falloff size. (Left: Large broad highlight, Right: Concentrated small highlight)\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 The more polished a surface the smaller the specular highlight should be.\par
+\pard\fi438\cf0 Very diffuse surfaces like chalk have a very broad specular highlight.\par
+\pard\cf4\par
+\cf2\b Gloss Slider\par
+\cf4\b0 Slide the slider from left to right to modify the intensity of the specular highlight. (Left: no highlight, Right: full intensity highlight)\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Gloss and reflection are very similar. Normally a very glossy surface will also be very reflective.\par
+\pard\cf4\par
+\cf2\b Reflection Slider\par
+\cf4\b0 Modifies the overall strength of the reflections. (Left: No reflections, Right: Full reflections)\par
+\cf0\fs24\par
+\cf2\b\fs18 Reflection Cube map\par
+\cf4\b0 A texture that is used to represent distant object reflections. Also helps Pro screen space reflections by creating an impression of the reflection sources that are behind the camera.\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Simple reflection maps often look better than noisy complicated ones.\par
+\pard\li427 Often the Sky-box texture for a scene makes an ideal Reflection Cube map.\par
+\pard\cf4\par
+\cf0\fs24\par
+\cf2\b\fs18 Fresnel Reflection Slider\par
+\cf4\b0 Boosts the reflection & gloss value based on surface normal and camera/eye vector. Fall off for the Fresnel Reflection is controlled by the Fresnel/Edge Alpha Falloff Slider. (Left: No Fresnel reflection, Right: Strong Fresnel reflection)\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip: \par
+\pard\li420\cf3\i0 Even very diffuse surfaces at obtuse angles to the eye can be quite reflective. Subtle use of Fresnel reflection on even chalky surfaces can add a great deal of realism.\par
+\pard\li404 Clever use of Fresnel Reflection can be used to create a refined version of rim lighting, which also looks more realistic and reacts better to extreme lighting conditions. This is very handy for surfaces like Hair.\par
+\pard\cf4\par
+\cf2\b Edge Alpha Slider\par
+\cf4\b0 Modifies the Alpha of a surface using the Fresnel/Edge Alpha Falloff value.\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Use the Edge/Alpha slider to let more light pass through the areas of a surface the are perpendicular to the camera. Useful for Wax and ceramic like surfaces.\par
+\pard\cf4\par
+\cf2\b Metallic Slider\par
+\cf4\b0 The more conductive a surface is, the more it will tint the reflection by its diffuse colour. (Left: Reflection will be the sources colour, Right: Reflection will be tinted by the diffuse colour)\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Plastics, waxes and ceramics are not very conductive and won't tint a reflection very much.\par
+\pard\li438\cf0 Metals such as gold are very conductive and tint reflections almost completely.\par
+\pard\cf4\par
+\cf2\b Diffuse Texture Map\par
+\cf4\b0 (RGB) Use to create per pixel diffuse colour variation. (A) Use to set opacity and light transference properties.\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 A Diffuse texture that features RGB variation and has little to no alpha will still show interesting surface variations on transparent surfaces. It can be used to create streaks and highlights that will only show under specific lighting conditions such as being back lit\cf4 .\par
+\pard\par
+\cf2\b Normal Texture Map\par
+\cf4\b0 Use to create per pixel normal variation.\par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Use a normal map on a large flat surface to add some noise to the normals, if reflection stretching becomes an issue.\par
+\pard\cf4\par
+\cf2\b Spec(R) Gloss(A) Reflect(B)\par
+\cf4\b0 Use to create Specular/Gloss/Reflection per pixel variation.\par
+\cf0\fs24\par
+\fs18\tab Red Channel = Specular \par
+\tab Green Channel = Gloss\f1\fs24\par
+\f0\fs18\tab Blue Channel = Reflection\f1\fs24\par
+\par
+\cf4\i\f0\fs18 Tip:\par
+\pard\li420\cf3\i0 Look to the \ldblquote Samplescene Metals.unity\rdblquote   file for examples on how achieve surfaces like rust and brushed steel.\par
+\pard\cf4\par
+\cf0\fs24\par
+\cf2\b\fs18 Density / Refraction Slider \par
+\cf4\b0 Changes the amount of refraction a surface will have. (Left: Less dense, Middle: Equal to atmosphere, Right: More dense). \par
+\cf0\fs24\par
+\cf4\i\fs18 Tip:\par
+\pard\li420\cf3\i0 Refractions are based on the front face surface angle and do not take into consideration the back face angle or the thickness of the surface. Because of this, higher density values are generally needed for larger objects.\par
+\pard\cf0\fs24\par
+\f1\page\cf2\lang1023\b\f0 Release Notes\par
+\par
+\cf0\fs18 Versions 1.1\b0\fs24\par
+\f2\fs19\par
+\cf2\b\i\f3\fs18 Additions:\par
+\pard\fi-360\li360\cf0\b0\i0\f4\tab\f3 Cutout shader variations.\par
+\f4\tab\f3 Full multi shadow support for Omnis and Spotlights and directionals in Forward lighting.\fs24\par
+\f4\fs18\tab\f3 Ability to over-bright Fresnel reflections.\fs24\par
+\pard\fs18\par
+\cf2\b\i Improvements:\par
+\pard\fi-360\li360\cf0\b0\i0\f4\tab\f3 Improved refractions. Will now invert on spheres if density is high, also magnifies better, Look to the Glass example scene and Diamond material for an example.\par
+\f4\tab\f3 Improved Chromatic\~aberrations, better splitting based on density and angle.\fs24\par
+\f4\fs18\tab\f3 Improved Reflections. Screen space reflections are better defined and will show at a larger range of angles.\fs24\par
+\pard\fs18\par
+\cf2\b\i Optimizations:\par
+\pard\fi-360\li360\cf0\b0\i0\f4\tab\f3 Moved some calculations from the fragment shader to the vertex shader.\par
+\f4\tab\f3 Reduced ALU usage on most fragment shaders\fs24\par
+\f4\fs18\tab\f3 Reduced TexCoord usage on reflection and refraction passes.\fs24\par
+\f4\fs18\tab\f3 Removed second grab pass from Pro Transparent Shaders. ( Can be commented back in if you are after the extra quality. looks great  in, but the general improvements to the reflections make up of it being removed )\fs24\par
+\pard\par
+\cf2\b\i\fs18 Notes:\cf0\b0\i0\fs24\par
+\par
+\pard\fi-360\li360\tx426\f4\fs18\tab\cf5\f5 The new refraction code takes different input values. Materials created for earlier versions will need a slight adjustment of the density property to look as they were, or even better : )\cf2\b\i\f3  \cf0\b0\i0\par
+\f4\tab\cf5\f3 The new reflection code gives clearer results. you might find you want to tone down reflections slightly to maintain the same levels as the previous version. The example scene materials were mostly left unchanged.\cf2\b\i  \cf0\b0\i0\par
+\f4\tab\cf5\f5 To re add the second Grab Pass to the Pro Transparent Shaders, do a search and replace for "//ReflectGrab//" and remove it . This will enable self reflection of the front faces on your surface. I'll leave the judgment on the performance/visual trade up to you.\cf2\b\f0  \cf0\b0\f3\fs24\par
+\pard\cf4\lang1033\f0\fs18\par
+\cf0\fs24\par
+\pard\qc\cf1\b\i\fs14 All assets and shader code created by Bruno Rime for the Unity3D engine.\par
+Email Address brunorime@gmail.com\par
+\pard\fs18\par
+\cf4\b0\i0  \par
+\cf0\f1\fs24\par
+\par
+\par
+}
+ 
